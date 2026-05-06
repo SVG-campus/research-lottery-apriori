@@ -10,6 +10,12 @@ huggingface:
     streaming: true
     note: Tiny GLUE stream for CI / dataloader sanity — replace with domain datasets as charters land.
 
-kaggle: []
+kaggle:
+  - note: "Search vetted draw-history datasets; document draw machine regime and license in truth_scope before any claim."
 
 search_keywords: [powerball drawings, lottery historical csv]
+
+reference_streams:
+  - name: Kaggle dataset search (draw history)
+    url: https://www.kaggle.com/search?q=powerball+history+in%3Adatasets
+    note: Epistemic lab only — CSVs do not imply Pearl causality or exploitable next-draw edge.

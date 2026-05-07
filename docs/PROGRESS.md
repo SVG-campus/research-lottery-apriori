@@ -1,16 +1,22 @@
 # Pillar progress — `research-lottery-apriori`
 
-**Overall solution proximity (rubric): ~20%** (low ceiling by design: observational lottery stacks rarely admit causal or exploitable “solutions”).
+**Overall solution proximity (rubric v2): ~51%** toward a defensible, preregistered answer for this pillar’s charter.
 
-See: [meta `docs/PILLAR_PROGRESS.md`](https://github.com/SVG-campus/Research-Apriori/blob/main/docs/PILLAR_PROGRESS.md).
+Formula (same as meta `docs/PILLAR_PROGRESS.md`): `round(0.30×charter + 0.30×LayerA + 0.25×repro + 0.15×data)` on 0–100 subscores.
+
+See the full rubric and sibling pillars: [meta `docs/PILLAR_PROGRESS.md`](https://github.com/SVG-campus/Research-Apriori/blob/main/docs/PILLAR_PROGRESS.md).
+
+## This pillar
 
 | Axis | % | Note |
 |------|---:|------|
-| Charter + prereg | 40 | Epistemic scope documented in `METHODS.md` |
-| Layer A / nulls | 12 | Needs unified null panel + logged `n_perm` |
-| Reproducibility | **43** | `runs/smoke.yaml` landed |
-| Domain data | 8 | Real draw CSVs via Kaggle/API not yet pinned in `datasets.yaml` |
+| Charter + prereg | 55 | `docs/PREREG.md` + `METHODS.md` |
+| Layer A / nulls | 38 | `tests/test_layer_a_permutation_smoke.py` + `notebooks/SMOKE_LAYER_A.ipynb` |
+| Reproducibility | 74 | `runs/smoke.yaml`, `methodology_preamble`, CI pytest |
+| Domain data | 30 | `datasets.yaml` Hub pins + `reference_streams` |
 
 ## Links
 
-- Skills: [Research-Apriori `skills/`](https://github.com/SVG-campus/Research-Apriori/tree/main/skills)
+- Preregistration template: [docs/PREREG.md](PREREG.md)
+- Methodology skills (exact code): [Research-Apriori `skills/`](https://github.com/SVG-campus/Research-Apriori/tree/main/skills)
+- Install: [CURSOR_SKILLS_INSTALL.md](https://github.com/SVG-campus/Research-Apriori/blob/main/docs/CURSOR_SKILLS_INSTALL.md)

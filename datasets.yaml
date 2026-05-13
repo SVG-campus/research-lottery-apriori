@@ -12,7 +12,10 @@ huggingface:
   - repo_id: fancyzhx/ag_news
     split: train[:1%]
     streaming: true
-    note: Pinned for `CHARTER_EPISTEMIC_NEWS_STREAM_SMOKE` CI + pytest stream smoke (not a lottery surrogate).
+    note: >
+      Pinned for `CHARTER_EPISTEMIC_NEWS_STREAM_SMOKE` CI + pytest stream smoke — news text as an
+      epistemic / streaming benchmark only; does not instantiate draw histories and does not support
+      Pearl-style causal or next-draw exploitability claims (see pillar charter + `truth_scope`).
 
 kaggle:
   - note: "Search vetted draw-history datasets; document draw machine regime and license in truth_scope before any claim."

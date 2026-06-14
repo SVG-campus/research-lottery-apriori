@@ -1,27 +1,30 @@
-# Preregistration template — `research-lottery-apriori`
-
+# Preregistration — `research-lottery-apriori`
+ 
 **Pillar:** `research-lottery-apriori`  
-**Title:** Lottery apriori emergence (epistemic lab)
+**Title:** Lottery Draws Epistemic Null Baseline (ECT-2026-003)
+**Date:** 2026-06-14  
+**ORCID Identifier:** `0009-0004-9601-5617`
 
 ## Charter (one paragraph)
 
-Treat draws as a controlled randomness lab; forbid exploitable next-draw claims without preregistered nulls.
+Treat draws as a controlled randomness lab; forbid exploitable next-draw claims without preregistered nulls. This study registers the baseline null causal performance of random draws, verifying that historical sequences (e.g. lag 1, lag 2 draws) and exogenous parameters (e.g. day of week, temperature, white noise) show zero causal links to next-draw sums under OCCA constraint-based searches.
 
 ## Primary question (Layer A)
 
-- **Question:** _What measurable difference do we expect under the stated hypothesis?_
-- **Primary metric:** _e.g. mean delta, AUC, correlation, regret …_
-- **Direction / threshold:** _pre-specify sign or minimal effect size before peeking._
+- **Question:** Do historical lottery draw sums (lag1_draw_sum, lag2_draw_sum) or exogenous covariates (day_of_week, temperature, noise_1) causally influence the next draw sum?
+- **Expected DAG:** Empty (no directed or undirected edges between past history/covariates and the next draw sum).
+- **Primary metric:** Discovered directed edges and information coefficient.
+- **Direction / threshold:** $\alpha = 0.05$ for PC algorithm. The number of discovered directed edges must equal 0. The absolute information coefficient of any nonlinear transformation must not beat the phase-shuffled Spectral MC null ($p > 0.05$).
 
 ## Null / negative controls
 
-- **Null model:** _e.g. y-shuffle, permutation, time-shift, placebo instrument …_
-- **Caps:** read `runs/smoke.yaml` (`n_perm_max`, `n_boot_max`) for local smoke; raise only on Kaggle/HF Jobs with a new `run_id`.
+- **Null model:** Phase-shuffled Spectral Monte Carlo (FFT surrogate paths).
+- **Caps:** Capped at $N = 25$ runs for local smokes (`runs/smoke.yaml`); $N = 1000$ for full remote promotion validation with run ID `charter_lottery_epistemic_prereg_run_01`.
 
 ## Truth scope & ethics
 
-- **Scope:** observational / simulated / scenario — _not_ universal causal claims unless design supports it.
-- **Data rights:** cite Hub/Kaggle dataset cards; no redistribution beyond their licenses.
+- **Scope:** Observational lottery draw sequences. This serves as an epistemic control baseline under the **ECT-2026** standard.
+- **Data rights:** Utilizes public lottery records pinned in `datasets.yaml`.
 
 ## Promotion rules
 

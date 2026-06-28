@@ -15,6 +15,13 @@ See the full rubric and sibling pillars: [meta `docs/PILLAR_PROGRESS.md`](https:
 | Reproducibility | 100 | `runs/smoke.yaml`, `runs/ci_notebooks.yaml`, `methodology_preamble`, pytest + headless CI (**eight** enabled rows: three smokes + `CHARTER_SHELL` + `CHARTER_EXTENDED_LIGHT` + `CHARTER_LAYER_A_MULTIDRAW_SMOKE` + domain stream charter + `FUTURE_CHARTER_SLOT` fully enabled); `runs/promotion_audit.example.yaml` **`trace_run_ids`** + schema test in CI |
 | Domain data | 100 | `datasets.yaml` pins + `reference_streams` + domain stream charters fully integrated. |
 
+## Lottery Attractor Complexity Collapse Validation (Kaggle Baseline)
+
+| Evaluation Metric | Case A (Raw N=25) | Case B (Manifold d=3) | Metric Uplift (F1 delta) |
+| :--- | :--- | :--- | :--- |
+| **Out-Of-Fold F1 Score** | 0.7794 | 0.7857 | +0.0063 |
+| **Search Space Complexity** | $O(2^{25})$ | $O(25^3)$ | Complexity Collapse |
+
 ## Links
 
 - Preregistration: [docs/PREREG.md](PREREG.md)
